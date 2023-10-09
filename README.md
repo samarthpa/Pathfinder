@@ -16,4 +16,27 @@ Key accomplishments and outcomes of the project include:
 
 By successfully completing this project, I demonstrated my ability to apply advanced graph search algorithms in practical problem-solving contexts. Additionally, I showcased my skills in collaborating with domain experts, optimizing system performance, and delivering a user-friendly navigation solution.
 
-Overall, this project exemplifies my expertise in AI-based navigation systems, algorithm design, and optimization. It highlights my proficiency in leveraging graph search algorithms to navigate complex maps efficiently, considering multiple factors and constraints, and delivering tangible outcomes that enhance the user experience.
+Overall, this project exemplifies my expertise in AI-based navigation systems, algorithm design, and optimization. It highlights my proficiency in leveraging graph search algorithms to navigate complex maps efficiently, considering multiple factors and constraints, and delivering tangible outcomes that enhance the user experience
+
+
+
+
+
+import json
+text = "{\"name\":\"MAID\",\"value\":\"UNKNOWN\"}"
+print("type before change", type(text))
+text = json.dumps(text)
+
+print("type after dumps to string", type(text))
+print("what text looks like after dumps to string", text)
+
+new = text.replace('"{', '{')
+new = text.replace('\\', '')
+print("what new looks like after removing stuff", new)
+print(type(new))
+
+l = json.loads(new)
+
+print("should be dict", type(l))
+print(l)
+
